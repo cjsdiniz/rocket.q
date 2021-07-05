@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rocket.Q - Perguntas e Respostas</title>
+    <title>Criar Sala - Rocket.Q</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/styles/global.css" />
-    <link rel="stylesheet" href="/styles/room.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,20 +20,34 @@
     />
   </head>
   <body>
-    <div id="room" class="content">
+    <div id="home" class="content">
       <header>
         <img src="./assets/logo.svg" alt="Rocket.Q logo" />
-
-        <div class="buttons"></div>
-        <div class="button outlined">
-          #323243
-          <img src="" alt="" />
-        </div>
-        <a href="#">
-          <img src="" alt="" />
-          Criar sala
-        </a>
       </header>
+
+      <div id="bg">
+        <div class="ball top"></div>
+        <div class="ball bottom"></div>
+      </div>
+      <main>
+        <div class="container">
+          <section>
+            <h2>Criar a sua sala</h2>
+            <form action="">
+              <label class="sr-only" for="room-pass">Insira uma senha</label>
+              <input
+                type="password"
+                id="room-pass"
+                placeholder="Insira uma senha"
+              />
+              <button>
+                <img src="./assets/users.svg" alt="Entrar na sala" />
+                Criar Sala
+              </button>
+            </form>
+          </section>
+        </div>
+      </main>
     </div>
   </body>
 </html>
