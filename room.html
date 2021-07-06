@@ -11,6 +11,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/room.css" />
+    <link rel="stylesheet" href="/styles/modal.css" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -67,7 +68,7 @@
             <div class="question-wrapper">
               <div class="question-content">
                 <div class="user">
-                  <img src="images/avatar.svg" alt="Avatar" />
+                  <img src="images/user.svg" alt="Avatar" />
                 </div>
                 <div class="question">
                   <p>Qual a diferença entre const, var e let no JavaScript?</p>
@@ -88,7 +89,7 @@
             <div class="question-wrapper">
               <div class="question-content">
                 <div class="user">
-                  <img src="images/avatar.svg" alt="Avatar" />
+                  <img src="images/user.svg" alt="Avatar" />
                 </div>
                 <div class="question">
                   <p>O que é JavaScript?</p>
@@ -109,10 +110,14 @@
             <div class="question-wrapper">
               <div class="question-content">
                 <div class="user">
-                  <img src="images/avatar.svg" alt="Avatar" />
+                  <img src="images/user.svg" alt="Avatar" />
                 </div>
                 <div class="question">
-                  <p>O que é Script?</p>
+                  <p>
+                    Você já sabe qausi as bases que precisa para melhorar o seu
+                    próximo nível com mestria? Definiu o seu foco e objectivo
+                    para seguir em frente?
+                  </p>
                 </div>
               </div>
               <div class="actions">
@@ -126,9 +131,53 @@
                 </a>
               </div>
             </div>
+
+            <div class="question-wrapper read">
+              <div class="question-content">
+                <div class="user">
+                  <img src="images/user.svg" alt="Avatar" />
+                </div>
+                <div class="question">
+                  <p>O que é Script?</p>
+                </div>
+              </div>
+              <div class="actions">
+                <!-- <a href="#" class="check">
+                  <img src="images/check.svg" alt="Marcar como lida" />
+                  Marcar como lida
+                </a> -->
+                <a href="#" class="delete">
+                  <img src="images/trash.svg" alt="Apagar" />
+                  Apagar
+                </a>
+              </div>
+            </div>
           </div>
         </section>
       </main>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-wrapper">
+      <div class="modal">
+        <h2>Apagar</h2>
+        <p>Tem a certeza que deseja apagar?</p>
+
+        <form action="#">
+          <label class="sr-only" for-id="password">Digite a sua senha</label>
+          <input
+            type="Password"
+            id="password"
+            name="password"
+            placeholder="Digite a senha"
+          />
+
+          <div class="buttons">
+            <div class="button grey">Cancelar</div>
+            <button class="red">Sim, apagar</button>
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 </html>
