@@ -1,6 +1,6 @@
 <!DOCTYPE html>
     <head>
-        <title>Rocket.Q - Perguntas e Respostas</title>
+        <title>Rocket.Q - Questions & Answers</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -28,10 +28,10 @@
                 <div class="buttons">
                     <div class="button outlined" id="room-id" data-id="<%= roomId %>">
                         #<%= roomId %>
-                        <img src="/images/copy.svg" alt="Copiar numero da sala"/>
+                        <img src="/images/copy.svg" alt="Room Id"/>
                     </div>
                     <a href="/create-pass" class="button">
-                        <img src="/images/users-white.svg" alt="Criar uma sala">
+                        <img src="/images/users-white.svg" alt="Create a room">
                         Criar Sala
                     </a>
                 </div>
@@ -41,13 +41,13 @@
                 <section id="question-form">
                     <h2>Faça sua pergunta</h2>
                     <form action="/question/create/<%= roomId %>" method="POST">
-                        <label class="sr-only" for-id="question">O que você quer perguntar?</label>
-                        <textarea name="question" id="question" placeholder="O que você quer perguntar?"></textarea>
+                        <label class="sr-only" for-id="question">What do you want to ask?</label>
+                        <textarea name="question" id="question" placeholder="What do you want to ask?"></textarea>
 
                         <footer>
                             <div>
-                                <img src="/images/lock.svg" alt="Cadeado">
-                                Esta pergunta é anônima
+                                <img src="/images/lock.svg" alt="Locker">
+                                This is an anonymous question 
                             </div>
                             <button>Enviar</button>
                         </footer>
@@ -55,7 +55,7 @@
                 </section>
 
                 <section id="questions">
-                    <h2 class="sr-only">Perguntas da comunidade</h2>
+                    <h2 class="sr-only">Community questions</h2>
                     <div class="questions">
 
                         <% if (isNoQuestions){ %>
@@ -74,12 +74,12 @@
                                 </div>
                                 <div class="actions">
                                     <a href="#" class="check" data-id="<%= question.id %>">
-                                        <img src="/images/check.svg" alt="Marcar como lida">
-                                        Marcar como lida
+                                        <img src="/images/check.svg" alt="Mark as read">
+                                        Mark as read
                                     </a>
                                     <a href="#" class="delete" data-id="<%= question.id %>">
-                                        <img src="/images/trash.svg" alt="Excluir">
-                                        Excluir
+                                        <img src="/images/trash.svg" alt="Delete">
+                                        Delete
                                     </a>
                                 </div>
                             </div>
@@ -114,16 +114,16 @@
         <!----- MODAL ------>
         <div class="modal-wrapper">
             <div class="modal">
-                <h2>Excluir Pergunta</h2>
-                <p>Tem certeza que você deseja excluir esta pergunta?</p>
+                <h2>Delete Question</h2>
+                <p>Are you sure you want to delete?</p>
 
                 <form action="#" method="POST">
-                    <label class="sr-only" for-id="password">Digite sua senha admin</label>
-                    <input type="password" id="password" name="password" placeholder="Digite sua senha" />
+                    <label class="sr-only" for-id="password">Enter your admin password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" />
 
                     <div class="buttons">
-                        <div class="button grey cancel">Cancelar</div>
-                        <button class="red">Sim, excluir</button>
+                        <div class="button grey cancel">Cancel</div>
+                        <button class="red">Yes, delete</button>
                     </div>
                 </form>
 
